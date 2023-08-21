@@ -1,10 +1,18 @@
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Splash from "./pages/Splash";
+import Comparator from "./pages/Comparator";
+import Directions from "./pages/Directions";
+import Layout from "./components/layouts/Layout";
 
 function App() {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <Layout>
+      <Routes>
+        <Route element={<Comparator />} path="/" />
+        <Route element={<Directions />} path='/directions'/>
+      </Routes>
+    </Layout>
   );
 }
 
