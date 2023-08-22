@@ -4,12 +4,8 @@ const MainNav = () => {
   return (
     <div>
       <ul>
-        <li>
-          <Link to="/directions">Directions</Link>
-        </li>
-        <li>
-          <Link to="/">Comparator</Link>
-        </li>
+        <li><Link to="/directions">Directions</Link></li>
+        <li><Link to="/comparator">Comparator</Link></li>
       </ul>
     </div>
   );
