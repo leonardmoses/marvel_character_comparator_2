@@ -1,19 +1,26 @@
 import { useState } from "react";
 
 
-const Char1SearchForm = ({name1 , setName1}) => {
+const Char1SearchForm = ({onName1Search}) => {
+    const [ name1Input , setName1Input ] = useState('')
 
-    function submitName1Search(e) {
+    function submitName1Input(e) {
         e.preventDefault();
-        // console.log(name1)
-        console.log(name1)
+        onName1Search(name1Input)
+        setName1Input('')
+        console.log(name1Input)
       }
+
+     function onChangeName1Input(e) {
+        setName1Input(e.target.value)
+     }
+
 
     return ( 
         <>
-            <form onSubmit={submitName1Search}>
-                <input type="text" placeholder="name" value={name1} onChange={(e) => {setName1(e.target.value)}}/>
-                <input type="submit" />
+            <form onSubmit={submitName1Input}>
+                <input type="text" placeholder="name" value={name1Input} onChange={onChangeName1Input}/>
+                <input type="submit" value='search' />
             </form>
         </>
      );
