@@ -8,7 +8,7 @@ const Comparator = (props) => {
 
   const charData = props.charData[0]
 
-  function getName1(name1Input) {
+  function onName1Search(name1Input) {
     setSubmittedName1(name1Input)
     console.log(name1Input)
     console.log(name1Submitted)
@@ -41,7 +41,7 @@ const Comparator = (props) => {
   return (
     <div>
     <h1>{name1Submitted ? name1Submitted : ""}</h1>
-    <Char1SearchForm  onName1Search={getName1} />
+    <Char1SearchForm  onName1Search={onName1Search} />
       {props.charData ? renderInfo() : 'loading...'}
     </div>
   
