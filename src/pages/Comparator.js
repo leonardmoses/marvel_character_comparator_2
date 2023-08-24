@@ -4,12 +4,12 @@ import Char1SearchForm from "../components/Char1Search";
 
 const Comparator = (props) => {
 
-  const [name1Submitted , setSubmittedName1] = useState('Name')
+  const [name1Submitted , setName1Submitted] = useState('Name')
 
   const charData = props.charData[0]
 
   function onName1Search(name1Input) {
-    setSubmittedName1(name1Input)
+    setName1Submitted(name1Input)
     console.log(name1Input)
     console.log(name1Submitted)
   }
