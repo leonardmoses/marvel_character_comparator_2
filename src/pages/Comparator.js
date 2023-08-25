@@ -1,29 +1,18 @@
 import { useState } from "react";
 import Char1SearchForm from "../components/Char1Search";
 
-
 const Comparator = (props) => {
+  const charData = props.charData[0];
 
-  const [name1Submitted , setName1Submitted] = useState('Name')
-
-  const charData = props.charData[0]
-
-  function onName1Search(name1Input) {
-    setName1Submitted(name1Input)
-    console.log(name1Input)
-    console.log(name1Submitted)
+  const nameSearchList = [];
+  for (let i = 0; i < props.charData.length; i++) {
+    // console.log(props.charData[i].name)
+    nameSearchList.push(props.charData[i].name);
   }
 
+  // console.log(charData)
+  // console.log(nameSearchList);
 
-  // const name = props.charData[0].name
-  // const combat = props.charData[0].combat
-  // const durability = props.charData[0].durability
-  // const intelligence = props.charData[0].intelligence
-  // const power = props.charData[0].power
-  // const speed = props.charData[0].speed
-  // const strength = props.charData[0].strength
-
-  
   function renderInfo() {
     return (
       <div>
@@ -35,16 +24,19 @@ const Comparator = (props) => {
         <h3>durability: {charData.powerstats.durability}</h3>
         <h3>intelligence: {charData.powerstats.intelligence}</h3>
       </div>
-    )
+    );
   }
 
   return (
     <div>
-    <h1>{name1Submitted ? name1Submitted : ""}</h1>
-    <Char1SearchForm  onName1Search={onName1Search} />
-      {props.charData ? renderInfo() : 'loading...'}
+      <h1>{props.name1}</h1>
+      <Char1SearchForm
+        name1={props.name1}
+        setName1={props.setName1}
+
+      />
+      {props.charData ? renderInfo() : "loading..."}
     </div>
-  
   );
 };
 

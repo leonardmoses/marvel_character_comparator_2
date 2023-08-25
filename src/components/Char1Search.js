@@ -1,25 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
-const Char1SearchForm = ({onName1Search}) => {
-    const [ name1Input , setName1Input ] = useState('')
-
+const Char1SearchForm = (props) => {
+    
     function submitName1Input(e) {
-        e.preventDefault();
-        onName1Search(name1Input)
-        setName1Input('')
-        console.log(name1Input)
-      }
+        e.preventDefault()
+        props.setName1(props.name1)
+    }
 
-     function onChangeName1Input(e) {
-        setName1Input(e.target.value)
-     }
-
-
+    
     return ( 
         <>
             <form onSubmit={submitName1Input}>
-                <input type="text" placeholder="name" value={name1Input} onChange={onChangeName1Input}/>
+                <input type="text" placeholder="name" onChange={(e) => props.setName1(e.target.value)}/>
                 <input type="submit" value='search' />
             </form>
         </>
