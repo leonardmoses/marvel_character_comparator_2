@@ -1,15 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 const Char1SearchForm = (props) => {
     
+    const inputNameRef=useRef()
 
-
+    function  onSubmit(e) {
+        e.preventDefault()
+        props.submitName1Input(inputNameRef.current.value)
+    }
     
     return ( 
         <>
-            <form onSubmit={props.submitName1Input}>
-                <input type="text" placeholder="Superhero Name" onChange={(e) => props.setName1(e.target.value)}/>
+            <form onSubmit={onSubmit}>
+                <input type="text" placeholder="Superhero Name" ref={inputNameRef} />
                 <input type="submit" value='search' />
             </form>
         </>
