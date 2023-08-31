@@ -2,31 +2,29 @@ import { useEffect, useState } from "react";
 import Char1SearchForm from "../components/Char1Search";
 
 const Comparator = (props) => {
-  let charData = [props.charData];
 
-  // console.log(charData[0]?.length)
-  // console.log(charData[0])
-  let charDataUpdate = charData[0];
-  console.log(charDataUpdate);
-
-  const nameSearchList = [];
-
-  function nameUpdated() {
-    if (charData[0]?.length > 0) {
-      for (let i=0; i < nameSearchList.length; i++) {
-        console.log(nameSearchList[i])
-      }
-    } else {
-      console.log('Nothing here yet')
-    }
+  let charData = props.charData;
+  
+  if (charData !== undefined) {
+    charData = charData
+  } else {
+    charData = []
   }
 
+  console.log(charData)
+  // console.log(charData[0])
+  // console.log(charData[0]?.name)
 
+  let nameSearchList = []
+  for (let i=0; i<charData.length; i++) {
+    nameSearchList.push(charData[i].name)
+  }
 
-
-  useEffect(() => {
-    nameUpdated();
-  }, [props.name1]);
+  const selectCharacterFromList = (e) => {
+    e.preventDefault()
+    console.log(e.target.innerText)
+    props.clickNameFromList(e.target.innerText)
+  }
 
   function renderInfo() {
     return (
@@ -47,12 +45,13 @@ const Comparator = (props) => {
   return (
     <div>
       <h1>{props.name1 ? props.name1 : "Superhero"}</h1>
-
+      
       <Char1SearchForm submitName1Input={props.submitName1Input} />
+      
       {nameSearchList.map((name, idx) => (
-        <button key={idx}>{name}</button>
+        <button key={idx} onClick={selectCharacterFromList}>{name}</button>
       ))}
-
+      
       {props.name1 ? renderInfo() : "loading..."}
     </div>
   );
