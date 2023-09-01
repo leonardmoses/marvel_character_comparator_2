@@ -15,10 +15,6 @@ function App() {
     setName1(inputName)
   }
 
-  function clickNameFromList(clickName) {
-    setName1(clickName)
-  }
-
 
   const URL = `https://www.superheroapi.com/api.php/10158052899366078/search/`;
 
@@ -53,7 +49,6 @@ function App() {
             setCharData={setCharData}
             submitName1Input={submitName1Input}
             name1={name1}
-            clickNameFromList={clickNameFromList}
             />
           </Layout>
         }

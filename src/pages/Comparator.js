@@ -3,8 +3,9 @@ import Char1SearchForm from "../components/Char1Search";
 
 const Comparator = (props) => {
 
+  const [selectedCharacter , setSelectedCharacter] = useState({})
+
   let charData = props.charData;
-  
   if (charData !== undefined) {
     charData = charData
   } else {
@@ -22,22 +23,26 @@ const Comparator = (props) => {
 
   const selectCharacterFromList = (e) => {
     e.preventDefault()
+    console.log(e)
+    console.log(e.target.value)
     console.log(e.target.innerText)
-    props.clickNameFromList(e.target.innerText)
+    setSelectedCharacter(charData[e.target.value])
   }
+
+  console.log(selectedCharacter)
 
   function renderInfo() {
     return (
       <div>
-        {/* 
-        <h2>Name: {charData.name}</h2>
-        <h3>Combat: {charData.powerstats.combat}</h3>
-        <h3>power: {charData.powerstats.power}</h3>
-        <h3>strength: {charData.powerstats.strength}</h3>
-        <h3>speed: {charData.powerstats.speed}</h3>
-        <h3>durability: {charData.powerstats.durability}</h3>
-        <h3>intelligence: {charData.powerstats.intelligence}</h3>
-      */}
+        
+        <h2>Name: {selectedCharacter.name}</h2>
+        <h3>Combat: {selectedCharacter.powerstats.combat}</h3>
+        <h3>power: {selectedCharacter.powerstats.power}</h3>
+        <h3>strength: {selectedCharacter.powerstats.strength}</h3>
+        <h3>speed: {selectedCharacter.powerstats.speed}</h3>
+        <h3>durability: {selectedCharacter.powerstats.durability}</h3>
+        <h3>intelligence: {selectedCharacter.powerstats.intelligence}</h3>
+      
       </div>
     );
   }
@@ -49,10 +54,10 @@ const Comparator = (props) => {
       <Char1SearchForm submitName1Input={props.submitName1Input} />
       
       {nameSearchList.map((name, idx) => (
-        <button key={idx} onClick={selectCharacterFromList}>{name}</button>
+        <button key={idx} value={idx} onClick={selectCharacterFromList}>{name}</button>
       ))}
       
-      {props.name1 ? renderInfo() : "loading..."}
+      {selectedCharacter.powerstats? renderInfo() : "loading..."}
     </div>
   );
 };
