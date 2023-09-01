@@ -42,6 +42,7 @@ const Comparator = (props) => {
         <h3>speed: {selectedCharacter.powerstats.speed}</h3>
         <h3>durability: {selectedCharacter.powerstats.durability}</h3>
         <h3>intelligence: {selectedCharacter.powerstats.intelligence}</h3>
+        <img src={selectedCharacter.image.url}></img>
       
       </div>
     );
