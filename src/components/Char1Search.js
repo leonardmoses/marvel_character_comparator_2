@@ -1,23 +1,26 @@
-import { useEffect, useRef, useState } from "react";
-
+import { useRef } from "react";
 
 const Char1SearchForm = (props) => {
-    
-    const inputNameRef=useRef()
+    //Initate useRef for inputing the name. 
+    // This method is better than onChange and avoides rerenders    
+    const inputName1Ref=useRef()
 
-    function  onSubmit(e) {
+    //Function to be called when form is submitted
+    function onSearchClick(e) {
         e.preventDefault()
-        props.submitName1Input(inputNameRef.current.value)
+        props.submitName1Input(inputName1Ref.current.value)
+        props.setUrl(props.baseURL+inputName1Ref.current.value)
+        props.setSelectedCharacter(props.charData?.[0])
     }
-    
+
     return ( 
         <>
-            <form onSubmit={onSubmit}>
-                <input type="text" placeholder="Superhero Name" ref={inputNameRef} />
+            <form onSubmit={onSearchClick}>
+                <input type="text" placeholder="Superhero Name" ref={inputName1Ref} />
                 <input type="submit" value='search' />
             </form>
         </>
      );
 }
- 
+
 export default Char1SearchForm;

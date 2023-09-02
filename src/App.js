@@ -7,36 +7,40 @@ import Layout from "./components/layouts/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+
 function App() {
-
+  //States
   const [name1 , setName1] = useState('')
+  const [charData, setCharData] = useState([]);
+  const [url , setUrl] = useState('');
 
+  // API Fetch URL
+  const baseURL = `https://www.superheroapi.com/api.php/10158052899366078/search/`;
+
+  // API Fetch
+  const getData = async () => {
+    try {
+      const response = await axios.get(url);
+      setCharData(response.data.results);
+    } catch (error) {
+      // console.log(error);
+      console.log(error.message)
+    }
+  };
+
+  // function to set name when user submits their search form
   function submitName1Input(inputName) {
     setName1(inputName)
   }
 
-
-  const URL = `https://www.superheroapi.com/api.php/10158052899366078/search/`;
-
-  const [charData, setCharData] = useState([]);
-
-  const getData = async () => {
-    try {
-      const response = await axios.get(URL+name1);
-      // console.log(response.data.results)
-      setCharData(response.data.results);
-      // console.log(response.data.results)
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  // console.log(charData)
-
-
+  //use Effect to Fetch the data everytime the name1 updates
   useEffect(() => {
     getData();
+    //Disables warning
+    // eslint-disable-next-line
   }, [name1]);
+
+  // console.log(charData)
 
   return (
     <Routes>
@@ -48,7 +52,8 @@ function App() {
             charData={charData}
             setCharData={setCharData}
             submitName1Input={submitName1Input}
-            name1={name1}
+            baseURL={baseURL}
+            setUrl={setUrl}
             />
           </Layout>
         }
