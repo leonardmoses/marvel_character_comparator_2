@@ -1,18 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import Splash from "./pages/Splash";
 import Comparator from "./pages/Comparator";
-import Directions from "./pages/Directions";
+import FutureApp from "./pages/FutureApp";
+import Directions from "./components/Directions";
+import Backdrop from "./components/Backdrop";
 import Layout from "./components/layouts/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 import './App.scss';
 
+
 function App() {
   //States
   const [name1 , setName1] = useState('')
   const [charData, setCharData] = useState([]);
   const [url , setUrl] = useState('');
+  const [directionsIsOpen , SetDirectionsIsopen] = useState(false);
 
   // API Fetch URL
   const baseURL = `https://www.superheroapi.com/api.php/10158052899366078/search/`;
@@ -33,6 +37,16 @@ function App() {
     setName1(inputName)
   }
 
+  //function to open Directions and Backdrop Modal Component
+  function openDirections() {
+    SetDirectionsIsopen(true)
+  }
+
+  //function to close Directions and Backdrop Modal Component 
+  function closeDirections() {
+    SetDirectionsIsopen(false)
+  }
+
   //use Effect to Fetch the data everytime the name1 updates
   useEffect(() => {
     getData();
@@ -47,26 +61,31 @@ function App() {
       <Route element={<Splash />} path="/" />
       <Route
         element={
-          <Layout>
+          <Layout openDirections={openDirections}>
             <Comparator
             charData={charData}
             setCharData={setCharData}
             submitName1Input={submitName1Input}
             baseURL={baseURL}
             setUrl={setUrl}
+            openDirections={openDirections}
             />
+            {directionsIsOpen ? <Directions onClose={closeDirections}/> : null}
+            {directionsIsOpen ? <Backdrop onBackdrop={closeDirections}/> : null}
           </Layout>
         }
         path="/comparator"
       />
+
       <Route
         element={
           <Layout>
-            <Directions />
+            <FutureApp/>
           </Layout>
         }
-        path="/directions"
+        path="/futureapp"
       />
+
     </Routes>
   );
 }

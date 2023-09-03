@@ -4,7 +4,7 @@ import MainNav from "./MainNav";
 const Layout = (props) => {
     return ( 
         <div>
-            <MainNav/>
+            <MainNav openDirections={props.openDirections}/>
             <main>{props.children}</main>
         </div>
      );
