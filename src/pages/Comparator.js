@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Char1SearchForm from "../components/Char1Search";
 
+import './Comparator.scss';
+
 const Comparator = (props) => {
   //Only searched character is put in this state
   const [selectedCharacter, setSelectedCharacter] = useState([]);
@@ -19,7 +21,7 @@ const Comparator = (props) => {
   };
 
   return (
-    <div>
+    <div className="ComparatorBody">
       <h1>{props.charData?[0].name : 'Superhero'}</h1>
 
       <Char1SearchForm
@@ -37,14 +39,14 @@ const Comparator = (props) => {
       ))}
 
         <div>
-          <h2>Name: {selectedCharacter?.name}</h2>
-          <h3>Combat: {selectedCharacter?.powerstats?.combat}</h3>
-          <h3>power: {selectedCharacter?.powerstats?.power}</h3>
-          <h3>strength: {selectedCharacter?.powerstats?.strength}</h3>
-          <h3>speed: {selectedCharacter?.powerstats?.speed}</h3>
-          <h3>durability: {selectedCharacter?.powerstats?.durability}</h3>
-          <h3>intelligence: {selectedCharacter?.powerstats?.intelligence}</h3>
-          <img src={selectedCharacter?.image?.url} atl="Image of Character"/>
+          <h3>Name:</h3><h4>{selectedCharacter?.name}</h4>
+          <h3>Combat:</h3><h4>{selectedCharacter?.powerstats?.combat}</h4>
+          <h3>power:</h3><h4>{selectedCharacter?.powerstats?.power}</h4>
+          <h3>strength:</h3><h4>{selectedCharacter?.powerstats?.strength}</h4>
+          <h3>speed:</h3><h4>{selectedCharacter?.powerstats?.speed}</h4>
+          <h3>durability:</h3><h4>{selectedCharacter?.powerstats?.durability}</h4>
+          <h3>intelligence:</h3><h4>{selectedCharacter?.powerstats?.intelligence}</h4>
+          <img src={selectedCharacter?.image?.url} alt={selectedCharacter?.name}/>
       </div>
 
     </div>

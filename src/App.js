@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import Splash from "./pages/Splash";
 import Comparator from "./pages/Comparator";
 import Directions from "./pages/Directions";
@@ -7,6 +6,7 @@ import Layout from "./components/layouts/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import './App.scss';
 
 function App() {
   //States
