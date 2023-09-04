@@ -1,4 +1,4 @@
-import './Directions.scss';
+import './Instructions.scss';
 
 const Directions = (props) => {
   return (

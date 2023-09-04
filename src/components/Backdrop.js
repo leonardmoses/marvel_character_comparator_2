@@ -1,8 +1,14 @@
 import "./Backdrop.scss"
 
 const Backdrop = (props) => {
+
+    function closeModals() {
+        props.onBackDropInstructions();
+        props.onBackdropCharList();
+    }
+
     return ( 
-        <div className="Backdrop" onClick={props.onBackdrop}/> 
+        <div className="Backdrop" onClick={closeModals}/> 
         );
 }
  

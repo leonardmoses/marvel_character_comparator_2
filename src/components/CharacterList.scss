@@ -1,2 +1,40 @@
-@import '../App.scss';
+@import "../App.scss";
 
+.CharacterListBody {
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: lightgreen;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+
+  h2 {
+    background-color: lightseagreen;
+  }
+
+  button {
+    background-color: lightsalmon;
+  }
+
+  .ListContainer {
+    overflow-y: scroll;
+    max-height: 60vh;
+
+    ul {
+      background-color: lightblue;
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0.5rem;
+      margin: 0 10px;
+
+
+      li {
+        background-color: lightcoral;
+        padding: 1rem;
+        border: 1px solid black;
+        // display: flex;
+        // justify-content: space-between;
+      }
+    }
+  }
+}

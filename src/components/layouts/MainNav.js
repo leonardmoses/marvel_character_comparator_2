@@ -1,31 +1,43 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Directions from "../Directions";
+import Instructions from "../Instructions";
 import Backdrop from "../Backdrop";
+import CharcterList from "../CharacterList";
 
 
 const MainNav = () => {
-  const [directionsIsOpen , SetDirectionsIsopen] = useState(false);
+  const [instructionsIsOpen , SetInstructionsIsOpen] = useState(false);
+  const [characteListIsOpen , setCharacterListIsOpen] = useState(false);
 
-  //function to open Directions and Backdrop Modal Component
-  function openDirections() {
-    SetDirectionsIsopen(true)
+  //function to open Instructions and Backdrop Modal Component
+  function openInstructions() {
+    SetInstructionsIsOpen(true)
   }
 
-  //function to close Directions and Backdrop Modal Component 
-  function closeDirections() {
-    SetDirectionsIsopen(false)
+  //function to close Instructions and Backdrop Modal Component 
+  function closeInstructions() {
+    SetInstructionsIsOpen(false)
+  }
+
+  function openCharList() {
+    setCharacterListIsOpen(true)
+  }
+
+  function closeCharList() {
+    setCharacterListIsOpen(false)
   }
 
   return (
     <div>
-      <button className="btn" onClick={openDirections}>Instructions</button>
+      <button className="btn" onClick={openInstructions}>Instructions</button>
+      <button className="btn" onClick={openCharList}>Full Character List</button>
       <ul>
         <li><Link to="/comparator">Comparator</Link></li>
         <li><Link to="/futureapp">Future App</Link></li>
       </ul>
-      {directionsIsOpen ? <Directions onClose={closeDirections}/> : null}
-      {directionsIsOpen ? <Backdrop onBackdrop={closeDirections}/> : null}
+      {characteListIsOpen ? <CharcterList onClose={closeCharList}/> : null}
+      {instructionsIsOpen ? <Instructions onClose={closeInstructions}/> : null}
+      {instructionsIsOpen || characteListIsOpen ? <Backdrop onBackDropInstructions={closeInstructions} onBackdropCharList={closeCharList}/> : null}
     </div>
   );
 };

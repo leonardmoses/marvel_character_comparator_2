@@ -3,6 +3,7 @@ import Char1SearchForm from "../components/Char1Search";
 
 import './Comparator.scss';
 
+
 const Comparator = (props) => {
   //Only searched character is put in this state
   const [selectedCharacter, setSelectedCharacter] = useState([]);
