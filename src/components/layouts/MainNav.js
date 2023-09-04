@@ -33,6 +33,7 @@ const MainNav = () => {
       <button className="btn" onClick={openCharList}>Full Character List</button>
       <ul>
         <li><Link to="/comparator">Comparator</Link></li>
+        <li><Link to="/singlecharacter">Single Character Lookup</Link></li>
         <li><Link to="/futureapp">Future App</Link></li>
       </ul>
       {characteListIsOpen ? <CharcterList onClose={closeCharList}/> : null}

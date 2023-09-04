@@ -1,27 +1,27 @@
 import { useRef } from "react";
 
-const Char1SearchForm = (props) => {
+const Char2SearchForm = (props) => {
     //Initate useRef for inputing the name. 
     // This method is better than onChange and avoides rerenders    
-    const inputName1Ref=useRef()
+    const inputName2Ref=useRef()
 
     //Function to be called when form is submitted
     function onSearchClick(e) {
         e.preventDefault()
-        props.submitName1Input(inputName1Ref.current.value)
-        props.setUrl1(props.baseURL+inputName1Ref.current.value)
-        props.setSelectedCharacter1(props.charData1?.[0])
-        // inputName1Ref.current.value = ''
+        props.submitName2Input(inputName2Ref.current.value)
+        props.setUrl2(props.baseURL+inputName2Ref.current.value)
+        props.setSelectedCharacter2(props.charData2?.[0])
+        // inputName2Ref.current.value = ''
     }
 
     return ( 
         <>
             <form onSubmit={onSearchClick}>
-                <input type="text" placeholder="Superhero Name" ref={inputName1Ref} />
+                <input type="text" placeholder="Superhero Name" ref={inputName2Ref} />
                 <input type="submit" value='search' />
             </form>
         </>
      );
 }
 
-export default Char1SearchForm;
+export default Char2SearchForm;
