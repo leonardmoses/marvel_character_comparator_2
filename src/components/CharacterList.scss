@@ -3,9 +3,22 @@
 .CharacterListBody {
   // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   background-color: lightgreen;
+  top:0px;
   width: 100%;
   z-index: 10;
   position: fixed;
+  animation: dropDownPage 300ms ease-in-out forwards;
+  transform-origin: top center;
+
+  
+  @keyframes dropDownPage {
+    0% {
+      transform: rotateX(-90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
 
   h2 {
     background-color: lightseagreen;
@@ -17,7 +30,8 @@
 
   .ListContainer {
     overflow-y: scroll;
-    max-height: 60vh;
+    max-height: 40vh;
+
 
     ul {
       background-color: lightblue;
@@ -32,8 +46,23 @@
         background-color: lightcoral;
         padding: 1rem;
         border: 1px solid black;
-        // display: flex;
-        // justify-content: space-between;
+        animation: growDownListItems 300ms 300ms ease-in-out forwards;
+        transform-origin: top center;
+
+        @keyframes growDownListItems {
+          0% {
+            transform: rotateX(-90deg);
+            opacity: 0;
+          }
+          70% {
+            transform: rotateX(20deg);
+          }
+          100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+          }
+        }
+
       }
     }
   }
