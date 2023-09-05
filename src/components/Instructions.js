@@ -4,19 +4,13 @@ const Directions = (props) => {
   return (
     <div className="InstructionsBody">
       <button onClick={props.onClose}>Close Instructions</button>
-      <h1>How To Use</h1>
+      <h2>How To Use</h2>
       <p>
-        These are the rules of what you must do. Do commodo eiusmod tempor est
-        ut ad laborum enim id reprehenderit commodo labore. Consequat do aliquip
-        exercitation consectetur ad ex minim aliqua voluptate aliquip. Ipsum
-        pariatur eiusmod culpa duis veniam proident tempor. Ut est cupidatat
-        consectetur tempor cupidatat ea sit nisi eiusmod minim do laborum
-        incididunt. Aute tempor ullamco amet aute eu et laboris cupidatat
-        laboris amet dolor. Reprehenderit esse occaecat irure ad duis Lorem eu
-        minim consequat Lorem nostrud nostrud dolore ad. Laboris ut exercitation
-        non duis ullamco minim consectetur sit duis sit. Culpa incididunt ea id
-        occaecat officia laborum enim.
+        Thank you for using the Marvel Character Comparator. Simply type a character into the search field and submit. Your search results may inlucde more than one character with a similarly registered name and all the results will populated under the search bar. Simply click on the desired character and you will see all their info! If the name was mispelled or that particular character isn't in the database there will be no results.
       </p>
+      <p>
+        This application is intended for looking up and comparing characters from the Marvel Universe. However, this API also includes characters from the DC Universe as well as some other popular franchises so feel free to break the rules! You can click on the full character list to get an idea what's included. There are hundreds!
+    </p>
     </div>
   );
 };

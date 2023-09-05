@@ -9,7 +9,13 @@
 
     @mixin TitleSecondary {
         font-family: 'RobotoCondensed','Trebuchet MS','Helvetica,Arial','sans-serif';
+        font-weight: lighter;
     } 
+
+    @mixin Body1 {
+      font-family: 'RobotoCondensed','Trebuchet MS','Helvetica,Arial','sans-serif';
+      font-weight: 100;
+  } 
 
 
     body, h1, h2, h3, h4, h5, h6, p, a, div, input {
@@ -26,6 +32,7 @@
     
     h1 {
       font-size: 5rem;
+      @include TitlePrimary();
     }
     
     h2 {
@@ -34,16 +41,18 @@
     }
     
     h3 {
-      font-size: 3rem;
+      font-size: 2rem;
+      @include TitleSecondary();
     }
     h4 {
       font-size: 2.5rem;
+      @include TitleSecondary();
     }
     h5 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
     h6 {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
     
     p {

@@ -22,7 +22,8 @@ const SingleCharacter = (props) => {
 
   return (
     <div className="ComparatorBody">
-      <h1>Superhero Info</h1>
+      <h1>Single Superhero</h1>
+      <h3>Look up a single Superhero</h3>
 
       <Char1SearchForm
         submitName1Input={props.submitName1Input}

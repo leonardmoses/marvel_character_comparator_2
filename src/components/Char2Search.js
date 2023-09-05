@@ -1,5 +1,7 @@
 import { useRef } from "react";
 
+import "./CharSearch.scss"
+
 const Char2SearchForm = (props) => {
     //Initate useRef for inputing the name. 
     // This method is better than onChange and avoides rerenders    
@@ -16,9 +18,12 @@ const Char2SearchForm = (props) => {
 
     return ( 
         <>
-            <form onSubmit={onSearchClick}>
-                <input type="text" placeholder="Superhero Name" ref={inputName2Ref} />
-                <input type="submit" value='search' />
+            <form onSubmit={onSearchClick} className="CharSearchForm">
+                <div className="SearchInputAndSubmit">
+                    <input className="Input" type="text" placeholder="Superhero Name" ref={inputName2Ref} />
+                    <input className="SearchSubmit" type="submit" value='search' />
+                </div>
+
             </form>
         </>
      );

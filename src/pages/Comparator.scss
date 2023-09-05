@@ -1,6 +1,129 @@
 @import "../App.scss";
 
 .ComparatorBody {
-    background-color: rgb(178, 235, 178);
+  background-color: rgb(178, 235, 178);
 
+  h1 {
+    text-align: center;
+  }
+
+  .ComparatorContent {
+    display: flex;
+
+    .Hero1, .Hero2 {
+      width: 50%;
+
+    }
+
+    .Hero1 {
+      background-color: rgb(39, 39, 162);
+      margin: 0 auto 0 0;
+
+    }
+
+    .Hero2 {
+      background-color: rgb(164, 37, 37);
+      margin: 0 0 0 auto;
+
+    }
+
+    .ListOfNames {
+        background-color: rgba(116, 6, 116, 0.589);
+        // margin-top: 5px;
+        height: 3rem;
+        overflow-y: auto;
+    }
+
+    .CharacterData {
+        // background-color: green;
+        // border: solid 1px black;
+
+        .CharacterInfo {
+
+          .Name {
+            background-color: lightgreen;
+            width: 100%;
+            text-align: center;
+          }
+
+          .FullName {
+            background-color: white;
+            text-align: center;
+            height: 2rem;
+            font-size: 2rem;
+          }
+
+          h3 {
+            width: 100%;
+            // background-color: rgba(255, 217, 0, 0.394);
+            color: white;
+          }
+
+          .InfoType, .InfoValue {
+            color: white;
+            width: 50%;
+            margin: 0.5rem 0;
+            border-bottom: 1px solid rgba(173, 216, 230, 0.243);
+            font-weight: lighter;
+          }
+
+          .InfoType {
+            // width: 40%;
+          }
+
+          .InfoValue {
+            // width: 40%;
+          }
+
+          .Stats, .Bio, .Intel {
+            // width: 50%;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+
+          }
+
+          .Stats {
+            
+          }
+
+          .Bio {
+
+          }
+
+          .Intel {
+
+          }
+        }
+
+        .ImageContainer {
+            width: fit-content;
+            margin: 0 auto;
+            
+            img {
+                max-height: 30vh;
+            }
+        }
+    }
+
+    .CharSearchForm {
+      background-color: rgb(0, 0, 0);
+      width: 100%;
+      margin: 0 auto;
+
+      .SearchInputAndSubmit {
+        // background-color: green;
+        width: 100%;
+        margin: 0 auto;
+
+        .Input {
+          width: 80%;
+        }
+
+        .SearchSubmit {
+          width: 18%;
+        }
+      }
+    }
+  }
 }

@@ -4,6 +4,8 @@ import Instructions from "../Instructions";
 import Backdrop from "../Backdrop";
 import CharcterList from "../CharacterList";
 
+import "./MainNav.scss"
+
 
 const MainNav = () => {
   const [instructionsIsOpen , SetInstructionsIsOpen] = useState(false);
@@ -28,14 +30,18 @@ const MainNav = () => {
   }
 
   return (
-    <div>
-      <button className="btn" onClick={openInstructions}>Instructions</button>
-      <button className="btn" onClick={openCharList}>Full Character List</button>
-      <ul>
-        <li><Link to="/comparator">Comparator</Link></li>
-        <li><Link to="/singlecharacter">Single Character Lookup</Link></li>
-        <li><Link to="/futureapp">Future App</Link></li>
-      </ul>
+    <div className="NavBody">
+      <h1>Marvel Character Comparator</h1>
+      <div className="ButtonsAndLinks">
+        <button className="btn" onClick={openInstructions}>Instructions</button>
+        <button className="btn" onClick={openCharList}>Full Character List</button>
+        <ul>
+          <li><Link to="/comparator">Comparator</Link></li>
+          <li><Link to="/singlecharacter">Single Character Lookup</Link></li>
+          <li><Link to="/futureapp">Future App</Link></li>
+        </ul>
+      </div>
+
       {characteListIsOpen ? <CharcterList onClose={closeCharList}/> : null}
       {instructionsIsOpen ? <Instructions onClose={closeInstructions}/> : null}
       {instructionsIsOpen || characteListIsOpen ? <Backdrop onBackDropInstructions={closeInstructions} onBackdropCharList={closeCharList}/> : null}

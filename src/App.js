@@ -66,7 +66,7 @@ function App() {
       // eslint-disable-next-line
     }, [name2]);
 
-  // console.log(charData1)
+  console.log(charData1)
 
   return (
     <Routes>
