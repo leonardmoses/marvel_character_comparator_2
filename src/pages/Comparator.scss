@@ -63,7 +63,11 @@
       }
       button:hover {
         background-color: rgb(188, 188, 246);
-        color: rgb(32, 33, 41)
+        color: rgb(32, 33, 41);
+      }
+      button:active {
+        background-color: rgb(221, 221, 248);
+        color: rgb(0, 23, 197);
       }
     }
 
@@ -76,7 +80,11 @@
       }
       button:hover {
         background-color: rgb(246, 188, 198);
-        color: rgb(41, 32, 33)
+        color: rgb(41, 32, 33);
+      }
+      button:active {
+        background-color: rgb(246, 218, 223);
+        color: rgb(189, 0, 22);
       }
     }
 

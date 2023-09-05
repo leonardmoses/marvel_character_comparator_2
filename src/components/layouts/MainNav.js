@@ -31,8 +31,11 @@ const MainNav = () => {
 
   return (
     <div className="NavBody">
-      <h1>MARVEL</h1>
-      <h3>Character Comparator</h3>
+      <div className="TitleDiv">
+        <h1>MARVEL</h1>
+        <h3>Character Comparator</h3>
+      </div>
+
       <div className="ButtonsAndLinks">
         <button className="btn" onClick={openInstructions}>Instructions</button>
         <button className="btn" onClick={openCharList}>Full Character List</button>

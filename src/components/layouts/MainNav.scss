@@ -3,10 +3,29 @@
 .NavBody {
     min-height: fit-content;
     background-color: #202020;
-    h1 , h2, h3{
-        text-align: center;
-        color: #e62429;
+
+    .TitleDiv {
+        // background-color: blue;
+        width: 100%;
+
+        h1 , h2, h3{
+            text-align: center;
+            color: #e62429;
+        }
+    
+        h1 {
+            background-color: white;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0 1rem;
+            letter-spacing: -0.3rem;
+        }
+
+        h3 {
+            margin-top: 0.5rem;
+        }
     }
+
 
     .ButtonsAndLinks {
         display: flex;
@@ -16,6 +35,8 @@
         button {
             background-color: rgb(255, 255, 255);
             color: rgb(74, 8, 56);
+            margin: 0 1px;
+            border: none;
             height: 2rem;
             width: 10rem;
             cursor: pointer;
@@ -58,8 +79,9 @@
                 color: rgb(144, 117, 139);
             }
 
-
-
+            :visted {
+                color: rgb(74, 8, 56);
+            }
 
         }
 
