@@ -1,10 +1,16 @@
 @import "../App.scss";
 
 .ComparatorBody {
-  background-color: rgb(178, 235, 178);
+  background-color: rgb(82, 4, 46);
+  background-image: linear-gradient(90deg, rgb(82, 4, 46), rgb(82, 4, 46), rgb(255, 255, 255), rgb(82, 4, 46), rgb(82, 4, 46));
 
-  h1 {
+  h1,h2 {
     text-align: center;
+  }
+
+  h2 {
+    color: rgb(200, 137, 35);
+    font-weight: lighter;
   }
 
   .ComparatorContent {
@@ -12,27 +18,69 @@
 
     .Hero1, .Hero2 {
       width: 50%;
-
     }
 
     .Hero1 {
       background-color: rgb(39, 39, 162);
+      background-image: linear-gradient(blue , black);
       margin: 0 auto 0 0;
 
     }
 
     .Hero2 {
       background-color: rgb(164, 37, 37);
+      background-image: linear-gradient(red, black);
       margin: 0 0 0 auto;
 
     }
 
-    .ListOfNames {
+    .ListOfNames1 , .ListOfNames2 {
         background-color: rgba(116, 6, 116, 0.589);
         // margin-top: 5px;
         height: 3rem;
         overflow-y: auto;
+        position: relative;
+        margin: 0 auto;
+        z-index: 2;
+
+        button {
+          text-align: center;
+          text-decoration: none;
+          // display: inline-block;
+          cursor: pointer;
+          width: 33.33%;
+      
+        }
+
     }
+
+    .ListOfNames1 {
+      button {
+        background-color: rgb(5, 5, 105);
+        color: rgb(222, 228, 251);
+        border: 1px solid black;
+        color: white;
+      }
+      button:hover {
+        background-color: rgb(188, 188, 246);
+        color: rgb(32, 33, 41)
+      }
+    }
+
+    .ListOfNames2 {
+      button  {
+        background-color: rgb(81, 2, 13);
+        color: rgb(251, 222, 222);
+        border: 1px solid black;
+        color: white;
+      }
+      button:hover {
+        background-color: rgb(246, 188, 198);
+        color: rgb(41, 32, 33)
+      }
+    }
+
+
 
     .CharacterData {
         // background-color: green;
@@ -40,17 +88,30 @@
 
         .CharacterInfo {
 
-          .Name {
-            background-color: lightgreen;
+          .Name1, .Name2 {
+            background-color: rgba(82, 4, 46, 0.591);
+            color: rgba(255, 255, 255, 0.781);
             width: 100%;
+            padding: 1rem 0;
             text-align: center;
+            position: relative;
+            z-index: 2;
           }
 
-          .FullName {
+          .FullName1, .FullName2 {
             background-color: white;
             text-align: center;
             height: 2rem;
             font-size: 2rem;
+          }
+
+
+          .FullName1 {
+            color: rgb(0, 16, 140);
+          }
+
+          .FullName2 {
+            color: rgb(104, 0, 0);
           }
 
           h3 {
@@ -68,23 +129,23 @@
           }
 
           .InfoType {
-            // width: 40%;
+            // width: 50%;
           }
 
           .InfoValue {
-            // width: 40%;
+            // width: 50%;
+            text-align: right;
           }
 
           .Stats, .Bio, .Intel {
             // width: 50%;
-            padding-top: 1.5rem;
             display: flex;
             flex-wrap: wrap;
-
+            padding: 1.5rem 1.5rem 0 1.5rem;
           }
 
           .Stats {
-            
+
           }
 
           .Bio {
@@ -95,15 +156,28 @@
 
           }
         }
+        .ImageBackground {
+          // background-image: linear-gradient(rgb(74, 8, 56), rgb(0, 0, 0));
+          background-image: radial-gradient(rgb(74, 8, 56), rgb(0, 0, 0));
+          border: solid 1px rgb(44, 42, 42);
+          opacity: 0.85;
+          position: relative;
+          z-index: 0;
 
-        .ImageContainer {
+          .ImageContainer {
             width: fit-content;
             margin: 0 auto;
+            border: solid 0.7rem white;
+            box-shadow: 0px 0px 18px 8px #000000;
+            
             
             img {
                 max-height: 30vh;
+                // border: solid 1px rgba(0, 0, 0, 0.263);
             }
+          }
         }
+
     }
 
     .CharSearchForm {

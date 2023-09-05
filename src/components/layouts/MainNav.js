@@ -31,14 +31,15 @@ const MainNav = () => {
 
   return (
     <div className="NavBody">
-      <h1>Marvel Character Comparator</h1>
+      <h1>MARVEL</h1>
+      <h3>Character Comparator</h3>
       <div className="ButtonsAndLinks">
         <button className="btn" onClick={openInstructions}>Instructions</button>
         <button className="btn" onClick={openCharList}>Full Character List</button>
         <ul>
-          <li><Link to="/comparator">Comparator</Link></li>
-          <li><Link to="/singlecharacter">Single Character Lookup</Link></li>
-          <li><Link to="/futureapp">Future App</Link></li>
+          <li><Link to="/comparator"><h5>Comparator</h5></Link></li>
+          <li><Link to="/singlecharacter"><h5>Single Character</h5></Link></li>
+          <li><Link to="/futureapp"><h5>Future App</h5></Link></li>
         </ul>
       </div>
 

@@ -1,2 +1,136 @@
 @import '../App.scss';
 
+.SingleCharacterBody {
+    background-color: rgb(160, 129, 67);
+    background-image: linear-gradient(90deg, rgb(160, 129, 67) , white, rgb(160, 129, 67));
+        h2 {
+            text-align: center;
+            color: rgb(64, 43, 64);
+            font-weight: 100;
+            opacity: 0;
+        }
+  
+      .ListOfNames {
+          background-color: rgb(84, 0, 84);
+          // margin-top: 5px;
+          height: 3rem;
+          overflow-y: auto;
+          position: relative;
+          z-index: 0;
+  
+      }
+  
+      .CharacterData {
+          background-color: rgb(77, 0, 77);
+          background-image: linear-gradient(purple , black);
+          // border: solid 1px black;
+  
+          .CharacterInfo {
+  
+            .Name {
+              background-color: rgb(160, 129, 67);
+              background-image: linear-gradient(90deg, rgb(160, 129, 67) , white, rgb(160, 129, 67));
+              color: rgb(78, 0, 78);
+              padding: 1rem 0;
+              width: 100%;
+              text-align: center;
+              position: relative;
+              z-index: 0;
+            }
+  
+            .FullName {
+              background-color: white;
+              color: purple;
+              text-align: center;
+              height: 2rem;
+              font-size: 2rem;
+            }
+  
+            h3 {
+              width: 100%;
+              // background-color: rgba(255, 217, 0, 0.394);
+              color: white;
+              padding-bottom: 0.7rem;
+            }
+  
+            .InfoType, .InfoValue {
+              color: white;
+              width: 50%;
+              margin: 0.5rem 0;
+              border-bottom: 1px solid rgba(173, 216, 230, 0.243);
+              font-weight: lighter;
+            }
+  
+            .InfoType {
+              // width: 40%;
+            }
+  
+            .InfoValue {
+              // width: 40%;
+            }
+  
+            .Stats, .Bio, .Intel {
+              // width: 50%;
+              padding-top: 1.5rem;
+              display: flex;
+              flex-wrap: wrap;
+  
+            }
+  
+            .Stats {
+              
+            }
+  
+            .Bio {
+  
+            }
+  
+            .Intel {
+  
+            }
+          }
+          .ImageBackground {
+            // background-color: rgb(57, 41, 23);
+            background-image: radial-gradient(rgb(74, 8, 56), rgb(0, 0, 0));
+            border: solid 1px rgb(44, 42, 42);
+            opacity: 0.85;
+            position: relative;
+            z-index: 0;
+  
+            .ImageContainer {
+              width: fit-content;
+              margin: 0 auto;
+              border: solid 0.7rem white;
+              box-shadow: 0px 0px 18px 8px #000000;
+              
+              
+              img {
+                  max-height: 30vh;
+                  // border: solid 1px rgba(0, 0, 0, 0.263);
+              }
+            }
+          }
+      }
+  
+      .CharSearchForm {
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        margin: 0 auto;
+  
+        .SearchInputAndSubmit {
+          // background-color: green;
+          width: 100%;
+          margin: 0 auto;
+  
+          .Input {
+            width: 80%;
+          }
+  
+          .SearchSubmit {
+            width: 18%;
+          }
+        }
+      }
+
+  }
+  

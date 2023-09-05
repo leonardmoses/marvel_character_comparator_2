@@ -37,7 +37,7 @@ const Comparator = (props) => {
 
   return (
     <div className="ComparatorBody">
-      <h1>Compare Two Superheros</h1>
+      <h2>Vs</h2>
       <div className="ComparatorContent">
       <div className="Hero1">
         <Char1SearchForm
@@ -47,7 +47,7 @@ const Comparator = (props) => {
           setUrl1={props.setUrl1}
           charData1={props.charData1}
         />
-        <div className="ListOfNames">
+        <div className="ListOfNames1">
           {listOfNames1.map((name, idx) => (
             <button key={idx} value={idx} onClick={selectCharacter1FromList}>
               {name}
@@ -56,12 +56,17 @@ const Comparator = (props) => {
         </div>
 
         <div className="CharacterData">
-          <div className="ImageContainer">
-            <img src={selectedCharacter1?.image?.url ? selectedCharacter1?.image?.url: "https://www.superherodb.com/gallery2/075/157/15709.webp"} alt={selectedCharacter1?.name}/>
+        
+          <div className="ImageBackground">
+            <div className="ImageContainer">
+              <img src={selectedCharacter1?.image?.url ? selectedCharacter1?.image?.url: "https://www.superherodb.com/gallery2/075/157/15709.webp"} alt={selectedCharacter1?.name}/>
+            </div>
           </div>
+
           <div className="CharacterInfo">
-            <h3 className="Name">{selectedCharacter1?.name ? selectedCharacter1?.name : "—"}</h3>
-            <div className="FullName">{selectedCharacter1?.biography?.["full-name"]}</div>
+            <h3 className="Name1">{selectedCharacter1?.name ? selectedCharacter1?.name : "—"}</h3>
+            <div className="FullName1">{selectedCharacter1?.biography?.["full-name"]}</div>
+
             <div className="Stats">
               <h3>Power Stats</h3>
               <h5 className="InfoType">Combat:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.combat}</h5>
@@ -73,7 +78,7 @@ const Comparator = (props) => {
             </div>
 
             <div className="Bio">
-            <h3>Appearance</h3>
+              <h3>Appearance</h3>
               <h5 className="InfoType">Gender:</h5><h5 className="InfoValue">{selectedCharacter1?.appearance?.gender}</h5>
               <h5 className="InfoType">Height:</h5><h5 className="InfoValue">{selectedCharacter1?.appearance?.height}</h5>
               <h5 className="InfoType">Weight:</h5><h5 className="InfoValue">{selectedCharacter1?.appearance?.weight}</h5>
@@ -85,7 +90,7 @@ const Comparator = (props) => {
             <div className="Intel">
               <h3>Intel</h3>
               <h5 className="InfoType">Place of birth:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.["place-of-birth"]}</h5>
-              <h5 className="InfoType">Percieved Moral Alignment</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.alignment}</h5>
+              <h5 className="InfoType">Percieved Moral Alignment:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.alignment}</h5>
               <h5 className="InfoType">Aliases:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.aliases}</h5>
               <h5 className="InfoType">Alter Egos:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.["alter-egos"]}</h5>
               <h5 className="InfoType">Relatives:</h5><h5 className="InfoValue">{selectedCharacter1?.connections?.relatives}</h5>
@@ -108,7 +113,7 @@ const Comparator = (props) => {
           charData2={props.charData2}
         />
 
-        <div className="ListOfNames">
+        <div className="ListOfNames2">
           {listOfNames2.map((name, idx) => (
             <button key={idx} value={idx} onClick={selectCharacter2FromList}>
               {name}
@@ -118,13 +123,14 @@ const Comparator = (props) => {
 
 
         <div className="CharacterData">
-          <div className="ImageContainer">
-            <img src={selectedCharacter2?.image?.url ? selectedCharacter2?.image?.url: "https://www.superherodb.com/gallery2/075/452/45242.webp"} alt={selectedCharacter2?.name}/>
+          <div className="ImageBackground">
+            <div className="ImageContainer">
+              <img src={selectedCharacter2?.image?.url ? selectedCharacter2?.image?.url: "https://www.superherodb.com/gallery2/075/452/45242.webp"} alt={selectedCharacter2?.name}/>
+            </div>
           </div>
-
           <div className="CharacterInfo">
-            <h3 className="Name">{selectedCharacter2?.name ? selectedCharacter2?.name : "—"}</h3>
-            <div className="FullName">{selectedCharacter2?.biography?.["full-name"]}</div>
+            <h3 className="Name2">{selectedCharacter2?.name ? selectedCharacter2?.name : "—"}</h3>
+            <div className="FullName2">{selectedCharacter2?.biography?.["full-name"]}</div>
             <div className="Stats">
               <h3>Power Stats</h3>
               <h5 className="InfoType">Combat:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.combat}</h5>
@@ -148,7 +154,7 @@ const Comparator = (props) => {
             <div className="Intel">
               <h3>Intel</h3>
               <h5 className="InfoType">Place of birth:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.["place-of-birth"]}</h5>
-              <h5 className="InfoType">Percieved Moral Alignment</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.alignment}</h5>
+              <h5 className="InfoType">Percieved Moral Alignment:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.alignment}</h5>
               <h5 className="InfoType">Aliases:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.aliases}</h5>
               <h5 className="InfoType">Alter Egos:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.["alter-egos"]}</h5>
               <h5 className="InfoType">Relatives:</h5><h5 className="InfoValue">{selectedCharacter2?.connections?.relatives}</h5>

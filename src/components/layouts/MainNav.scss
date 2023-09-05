@@ -1,33 +1,68 @@
 @import '../../App.scss';
 
 .NavBody {
-    background-color: rgb(47, 47, 51);
-    h1 {
-        color: rgb(157, 66, 154);
+    min-height: fit-content;
+    background-color: #202020;
+    h1 , h2, h3{
+        text-align: center;
+        color: #e62429;
     }
 
     .ButtonsAndLinks {
         display: flex;
-        background-color: aqua;
+        // background-color: aqua;
+        margin-top: 2rem;
 
         button {
-            background-color: rgb(168, 27, 144);
+            background-color: rgb(255, 255, 255);
+            color: rgb(74, 8, 56);
+            height: 2rem;
+            width: 10rem;
             cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: rgb(77, 6, 63);
+            color: white;
         }
     
         ul {
-            background-color: green;
+            // background-color: green;
             display: flex;
             margin: 0 0 0 auto;
 
             li {
-                background-color: pink;
-                border: solid black 1px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(74, 8, 56);
+                border: solid 1px grey;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+                height: 2rem;
+                width: 10rem;
+                cursor: pointer;
+                text-align: center;
+                position: relative;
+
+                h5 {
+                    // background-color: blue;
+                    position: absolute;
+                    width: 100%;
+                    top: 20%;
+                }
             }
-            li:hover {
-                background-color: rgb(192, 192, 215);
+            :hover{
+                background-color: rgb(77, 6, 63);
+                color: white;
             }
+            :active {
+                color: rgb(144, 117, 139);
+            }
+
+
+
+
         }
+
     }
 
 
