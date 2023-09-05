@@ -166,7 +166,7 @@
         }
         .ImageBackground {
           // background-image: linear-gradient(rgb(74, 8, 56), rgb(0, 0, 0));
-          background-image: radial-gradient(rgb(74, 8, 56), rgb(0, 0, 0));
+          background-image: radial-gradient(circle,rgb(74, 8, 56), rgb(0, 0, 0));
           border: solid 1px rgb(44, 42, 42);
           opacity: 0.85;
           position: relative;

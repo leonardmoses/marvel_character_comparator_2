@@ -3,10 +3,8 @@
 .SingleCharacterBody {
     background-color: rgb(160, 129, 67);
     background-image: linear-gradient(90deg, rgb(160, 129, 67) , white, rgb(160, 129, 67));
+    
         h2 {
-            text-align: center;
-            color: rgb(64, 43, 64);
-            font-weight: 100;
             opacity: 0;
         }
   
@@ -112,7 +110,7 @@
           }
           .ImageBackground {
             // background-color: rgb(57, 41, 23);
-            background-image: radial-gradient(rgb(74, 8, 56), rgb(0, 0, 0));
+            background-image: radial-gradient(circle,rgb(74, 8, 56), rgb(0, 0, 0));
             border: solid 1px rgb(44, 42, 42);
             opacity: 0.85;
             position: relative;
