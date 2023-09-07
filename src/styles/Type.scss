@@ -1,19 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+  @import './Variables.scss';
+
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-    @mixin TitlePrimary {
-        font-family: 'RobotoCondensed','Trebuchet MS','Helvetica,Arial','sans-serif';
-        font-weight: bold;
+
+
+    @mixin Logo {
+      background-color: $MarvelRed;
+      color: white;
+      width: fit-content;
+      margin: 0 auto;
+      letter-spacing: -0.5rem;
+      padding: 0rem 1.2rem 0rem 0.6rem;
     }
 
-    @mixin TitleSecondary {
-        font-family: 'RobotoCondensed','Trebuchet MS','Helvetica,Arial','sans-serif';
-        font-weight: lighter;
+    @mixin Title1 {
+        font-family: 'Roboto','Trebuchet MS','Helvetica,Arial','sans-serif';
+        font-weight: 800;
+    }
+
+    @mixin Title2 {
+        font-family: 'Roboto Condensed','Trebuchet MS','Helvetica,Arial','sans-serif';
+        font-weight: 400;
+        background-color: $tertiary3;
+        background-image: linear-gradient(45deg, $blue3 , $blue2, $primary2, $primary3);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    } 
+    @mixin Title3 {
+      font-family: 'Roboto','Trebuchet MS','Helvetica,Arial','sans-serif';
+      font-weight: 400;
+      background-color: $tertiary5;
+      background-image: linear-gradient(45deg, $tertiary4 , $tertiary2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+  } 
+
+    @mixin Title4 {
+      font-family: 'Roboto','Trebuchet MS','Helvetica,Arial','sans-serif';
+      font-weight: 300;
     } 
 
     @mixin Body1 {
-      font-family: 'RobotoCondensed','Trebuchet MS','Helvetica,Arial','sans-serif';
+      font-family: 'Roboto','Trebuchet MS','Helvetica,Arial','sans-serif';
       font-weight: 100;
   } 
 
@@ -23,36 +58,32 @@
     
     }
 
-    .hx1 {
-      font-size: 4.5rem;
-    }
-    .hx2 {
-      font-size: 6rem;
-    }
     
     h1 {
-      font-size: 5rem;
-      @include TitlePrimary();
+      font-size: 7rem;
+      @include Title1();
     }
     
     h2 {
       font-size: 3.5rem;
-      @include TitlePrimary();
+      @include Title2();
     }
     
     h3 {
       font-size: 2rem;
-      @include TitleSecondary();
+      @include Title3();
     }
     h4 {
       font-size: 2.5rem;
-      @include TitleSecondary();
+      @include Title4();
     }
     h5 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+      @include Title4()
     }
     h6 {
       font-size: 1.1rem;
+      @include Title4()
     }
     
     p {

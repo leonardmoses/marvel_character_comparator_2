@@ -5,7 +5,7 @@ const CharcterList = (props) => {
 
   return (
     <div className="CharacterListBody">
-      <h2>List of Searchable Characters</h2>
+      <h3>List of Searchable Characters</h3>
       <button onClick={props.onClose}>Close</button>
       <div className="ListContainer">
         <ul>

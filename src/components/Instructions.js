@@ -4,7 +4,7 @@ const Directions = (props) => {
   return (
     <div className="InstructionsBody">
       <button onClick={props.onClose}>Close Instructions</button>
-      <h2>How To Use</h2>
+      <h3>How To Use</h3>
       <div className="ParagraphDiv">
         <p>
           Thank you for using the Marvel Character Comparator. Simply type a

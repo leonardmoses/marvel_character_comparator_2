@@ -1,0 +1,118 @@
+/*#region colors*/
+
+$themeColor: #93C572;
+
+$MarvelRed: #e62429;
+$MarvelBlack: #202020;
+
+// Color Theme //
+$primary1: #FD8285;
+$primary2: #F75357;
+$primary3: #E62429;
+$primary4: #B70C10;
+$primary5: #8A0004;
+$primaryWhite: #ebd0d1;
+$primaryBlack: #2a0304;
+
+$secondary1: #DA70AE;
+$secondary2: #C6428F;
+$secondary3: #B81D78;
+$secondary4: #93095A;
+$secondary5: #6F0041;
+$secondaryWhite: #f0d8e6;
+$secondaryBlack: #240116;
+
+$tertiary1: #FFBA83;
+$tertiary2: #F99D53;
+$tertiary3: #E87B24;
+$tertiary4: #B9590C;
+$tertiary5: #8C3E00;  
+$tertiaryWhite: #f6ece2;
+$tertiaryBlack: #271200;
+
+$complementary1: #77DD72;
+$complementary2: #4ACA43;
+$complementary3: #25BC1D;
+$complementary4: #11960A;
+$complementary5: #067100;
+$complementaryWhite: #cbebca;
+$complementaryBlack: #022200;
+
+$blue1: #5874C8;
+$blue2: #1F48C2;
+$blue3: #0B2E98;
+$blue4: #062171;
+$blue5: #021040;
+$blueWhite: #cfd4e4;
+$blueBlack: #020d2c;
+
+
+/*#endregion Variables*/
+
+
+/*#region mixins*/
+@mixin Titleh1 {
+    background-color: $primary3;
+    background-image: linear-gradient(0deg, $secondary4, $secondary2, $secondary3);
+    background-clip: text;
+    /* background-size: 100%; */
+    /* background-repeat: repeat; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    // margin-bottom: 40px;
+}
+
+@mixin Titleh2 {
+    background-color: $secondary3;
+    background-image: linear-gradient(0deg, $secondary3, $secondary2, $secondary3);
+    background-clip: text;
+    /* background-size: 100%; */
+    /* background-repeat: repeat; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    // margin-bottom: 40px;
+}
+
+@mixin NavLinks {
+    background-color: $primary3;
+    background-image: linear-gradient(0deg, $primary3, $tertiary3);
+    background-clip: text;
+    /* background-size: 100%; */
+    /* background-repeat: repeat; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+@mixin Button($FontSize) {
+
+    background-color: $tertiary4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: $FontSize;
+    border-radius: 7px;
+
+    transition-duration: 0.2s;
+    
+    &:hover {
+        background-color: $tertiary2;
+        color: $tertiary4;
+    }
+    &:active {
+        transform: scale(0.97);
+        color: $tertiary1;
+    }
+}
+
+
+/*#endregion mixins*/

@@ -2,7 +2,7 @@
 
 .NavBody {
     min-height: fit-content;
-    background-color: #202020;
+    background-color: $MarvelBlack;
 
     .TitleDiv {
         // background-color: blue;
@@ -10,19 +10,17 @@
 
         h1 , h2, h3{
             text-align: center;
-            color: #e62429;
+            color: $MarvelRed;
         }
+        
     
         h1 {
-            background-color: white;
-            width: fit-content;
-            margin: 0 auto;
-            padding: 0 1rem;
-            letter-spacing: -0.3rem;
+            @include Logo();
+            font-size: 6rem;
         }
 
-        h3 {
-            margin-top: 0.5rem;
+        h2 {
+            font-size: 2.65rem;
         }
     }
 

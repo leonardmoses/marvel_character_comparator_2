@@ -1,2 +1,58 @@
-@import '../App.scss';
+@import "../App.scss";
 
+.SplashPage {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .BannerContainer {
+        // background-color: rgb(157, 177, 177);
+        margin: 0 auto;
+
+
+        .HeaderDiv {
+            // background-color: green;
+            width: 100%;
+            color: rgb(100, 5, 194);
+            align-items: center;
+            
+            margin-top: 35vh;
+
+            
+            h1, h2 {
+                // background-color: bisque;
+                color: rgb(190, 185, 76);
+                text-align: center;
+            }
+
+            h1 {
+                @include Logo();
+            }
+
+            h2 {
+                font-size: 3.1rem;
+            }
+            
+        }
+
+        .EnterDiv {
+            // background-color: blue;
+            // color: orange;
+
+            h5 {
+                // background-color: red;
+                color: white;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 2rem;
+            }
+            h5:hover {
+                color: $secondary3;
+            }
+            h5:active {
+                color: $complementary3;
+            }
+        }
+    }
+}
