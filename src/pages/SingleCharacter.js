@@ -22,7 +22,7 @@ const SingleCharacter = (props) => {
 
   return (
     <div className="SingleCharacterBody">
-      <h2>Single</h2>
+      <h3>Single</h3>
 
       <Char1SearchForm
         submitName1Input={props.submitName1Input}

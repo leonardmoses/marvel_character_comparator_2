@@ -37,7 +37,7 @@ const Comparator = (props) => {
 
   return (
     <div className="ComparatorBody">
-      <h2>Vs</h2>
+      <h3>Vs</h3>
       <div className="ComparatorContent">
       <div className="Hero1">
         <Char1SearchForm
@@ -64,21 +64,21 @@ const Comparator = (props) => {
           </div>
 
           <div className="CharacterInfo">
-            <h3 className="Name1">{selectedCharacter1?.name ? selectedCharacter1?.name : "—"}</h3>
-            <div className="FullName1">{selectedCharacter1?.biography?.["full-name"]}</div>
+            <div className="Name1"><h4>{selectedCharacter1?.name ? selectedCharacter1?.name : "Alias"}</h4></div>
+            <div className="FullName1"><h4>{selectedCharacter1?.biography?.["full-name"] ? selectedCharacter1?.biography?.["full-name"] : "Full Name"}</h4></div>
 
             <div className="Stats">
-              <h3>Power Stats</h3>
+              <h4>Power Stats</h4>
               <h5 className="InfoType">Combat:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.combat}</h5>
-              <h5 className="InfoType">power:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.power}</h5>
-              <h5 className="InfoType">strength:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.strength}</h5>
-              <h5 className="InfoType">speed:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.speed}</h5>
-              <h5 className="InfoType">durability:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.durability}</h5>
-              <h5 className="InfoType">intelligence:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.intelligence}</h5>
+              <h5 className="InfoType">Power:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.power}</h5>
+              <h5 className="InfoType">Strength:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.strength}</h5>
+              <h5 className="InfoType">Speed:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.speed}</h5>
+              <h5 className="InfoType">Durability:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.durability}</h5>
+              <h5 className="InfoType">Intelligence:</h5><h5 className="InfoValue">{selectedCharacter1?.powerstats?.intelligence}</h5>
             </div>
 
             <div className="Bio">
-              <h3>Appearance</h3>
+              <h4>Appearance</h4>
               <h5 className="InfoType">Gender:</h5><h5 className="InfoValue">{selectedCharacter1?.appearance?.gender}</h5>
               <h5 className="InfoType">Height:</h5><h5 className="InfoValue">{selectedCharacter1?.appearance?.height}</h5>
               <h5 className="InfoType">Weight:</h5><h5 className="InfoValue">{selectedCharacter1?.appearance?.weight}</h5>
@@ -88,7 +88,7 @@ const Comparator = (props) => {
             </div>
 
             <div className="Intel">
-              <h3>Intel</h3>
+              <h4>Intel</h4>
               <h5 className="InfoType">Place of birth:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.["place-of-birth"]}</h5>
               <h5 className="InfoType">Percieved Moral Alignment:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.alignment}</h5>
               <h5 className="InfoType">Aliases:</h5><h5 className="InfoValue">{selectedCharacter1?.biography?.aliases}</h5>
@@ -129,20 +129,20 @@ const Comparator = (props) => {
             </div>
           </div>
           <div className="CharacterInfo">
-            <h3 className="Name2">{selectedCharacter2?.name ? selectedCharacter2?.name : "—"}</h3>
-            <div className="FullName2">{selectedCharacter2?.biography?.["full-name"]}</div>
+            <div className="Name2"><h4>{selectedCharacter2?.name ? selectedCharacter2?.name : "Alias"}</h4></div>
+            <div className="FullName2"><h4>{selectedCharacter2?.biography?.["full-name"] ? selectedCharacter2?.biography?.["full-name"] : "Full Name"}</h4></div>
             <div className="Stats">
-              <h3>Power Stats</h3>
+              <h4>Power Stats</h4>
               <h5 className="InfoType">Combat:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.combat}</h5>
-              <h5 className="InfoType">power:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.power}</h5>
-              <h5 className="InfoType">strength:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.strength}</h5>
-              <h5 className="InfoType">speed:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.speed}</h5>
-              <h5 className="InfoType">durability:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.durability}</h5>
-              <h5 className="InfoType">intelligence:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.intelligence}</h5>
+              <h5 className="InfoType">Power:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.power}</h5>
+              <h5 className="InfoType">Strength:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.strength}</h5>
+              <h5 className="InfoType">Speed:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.speed}</h5>
+              <h5 className="InfoType">Durability:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.durability}</h5>
+              <h5 className="InfoType">Intelligence:</h5><h5 className="InfoValue">{selectedCharacter2?.powerstats?.intelligence}</h5>
             </div>
 
             <div className="Bio">
-            <h3>Appearance</h3>
+              <h4>Appearance</h4>
               <h5 className="InfoType">Gender:</h5><h5 className="InfoValue">{selectedCharacter2?.appearance?.gender}</h5>
               <h5 className="InfoType">Height:</h5><h5 className="InfoValue">{selectedCharacter2?.appearance?.height}</h5>
               <h5 className="InfoType">Weight:</h5><h5 className="InfoValue">{selectedCharacter2?.appearance?.weight}</h5>
@@ -152,7 +152,7 @@ const Comparator = (props) => {
             </div>
 
             <div className="Intel">
-              <h3>Intel</h3>
+              <h4>Intel</h4>
               <h5 className="InfoType">Place of birth:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.["place-of-birth"]}</h5>
               <h5 className="InfoType">Percieved Moral Alignment:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.alignment}</h5>
               <h5 className="InfoType">Aliases:</h5><h5 className="InfoValue">{selectedCharacter2?.biography?.aliases}</h5>

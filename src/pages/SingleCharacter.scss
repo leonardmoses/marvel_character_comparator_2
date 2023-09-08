@@ -3,9 +3,12 @@
 .SingleCharacterBody {
     background-color: rgb(160, 129, 67);
     background-image: linear-gradient(90deg, rgb(160, 129, 67) , white, rgb(160, 129, 67));
+    // background-image: linear-gradient(90deg, $tertiaryBlack, $tertiary5 , white, $tertiary5, $tertiaryBlack);
     
-        h2 {
+        h3 {
             opacity: 0;
+            font-size: 3rem;
+            // height: 3rem;
         }
   
       .ListOfNames {
@@ -41,6 +44,9 @@
       .CharacterData {
           background-color: rgb(77, 0, 77);
           background-image: linear-gradient(purple , black);
+          h3 {
+            opacity: 1;
+          }
           // border: solid 1px black;
   
           .CharacterInfo {
