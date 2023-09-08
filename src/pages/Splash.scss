@@ -28,10 +28,17 @@
 
             h1 {
                 @include Logo();
+                
+                @include iphone12Pro {font-size: 6rem;};
+                @include iphoneSE {font-size: 6rem;};
+                @include iphone5SE {font-size: 5rem;};
             }
 
             h2 {
                 font-size: 3.1rem;
+                @include iphone12Pro {font-size: 2.65rem;};
+                @include iphoneSE {font-size: 2.65rem;};
+                @include iphone5SE {font-size: 2.2rem;};
             }
             
         }

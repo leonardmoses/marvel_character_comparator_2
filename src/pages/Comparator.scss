@@ -45,11 +45,14 @@
         margin: 0 auto;
         z-index: 2;
 
+        @include Res500 {height: 4rem;};
+
         button {
           text-align: center;
           text-decoration: none;
           cursor: pointer;
           width: 33.33%;
+          @include Res500 {width: 100%};
         }
     }
 
@@ -105,6 +108,8 @@
               font-size: 3.3rem;
               font-weight: 300;
               text-shadow: 0px 0px 3px black;
+
+              @include Res500 {font-size: 1.5rem;};
             }
           }
           
@@ -128,6 +133,7 @@
             h4 {
               text-align: center;
               font-size: 1.8rem;
+              @include Res500 {font-size: 1.3rem;};
             }
           }
 
@@ -152,22 +158,47 @@
 
           .InfoType {
             font-weight: 300;
+            @include Res500{
+              font-weight: 400;
+              font-size: 1.5rem;
+            };
           }
 
           .InfoValue {
             text-align: right;
             font-weight: 100;
             letter-spacing: 0.05rem;
+            @include Res500{
+              margin-bottom: 1.7rem;
+            };
           }
 
           .Stats, .Bio, .Intel {
             display: flex;
             flex-wrap: wrap;
             padding: 1.5rem 1.5rem 0 1.5rem;
+            @include Res500{
+              padding: 1.7rem 0.8rem 0 0.8rem;
+              // word-break: break-all;
+            };
 
             h4 {
               color: white;
               margin-bottom: 0.5rem;
+              @include Res500{
+                font-size: 1.5rem;
+                text-align: center;
+              };
+            }
+
+            h5 {
+              @include Res500{
+                font-size: 1rem;
+                text-align: center;
+                // background-color: pink;
+                width: 100%;
+              };
+              
             }
           }
         }
@@ -186,7 +217,13 @@
             box-shadow: 0px 0px 12px 4px #000000;
             
             img {
-                max-height: 30vh;
+                max-height: 30vh; 
+                @include Res900 {max-height: 30vh;};
+                @include Res700 {max-height: 28vh;};
+                @include Res500 {max-height: 25vh;};
+                @include iphone12Pro {max-height: 30vh;};
+                @include iphoneSE {max-height: 34vh;};
+                @include iphone5SE {max-height: 34vh;};
             }
           }
         }
@@ -205,10 +242,12 @@
         .Input {
           width: 80%;
           border-radius: 4px;
+          @include Res500 {width: 95%; margin: 0 auto};
         }
 
         .SearchSubmit {
           width: 18%;
+          @include Res500 {width: 100%;};
         }
       }
     }

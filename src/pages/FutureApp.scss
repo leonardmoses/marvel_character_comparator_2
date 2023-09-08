@@ -17,16 +17,24 @@
             padding-bottom: 0.8rem;
             border-bottom: solid 1px $goldBlack;
             font-size: 3.5rem;
+            @include Res500 {font-size: 2.5rem;};
+            @include iphone12Pro {font-size: 2rem;};
         }
 
         h3 {
             font-size: 2.25rem;
+            @include Res500 {font-size: 1.5rem;};
+            @include iphone12Pro {font-size: 1.3rem;};
         }
 
     }
 
     .FutureAppContent {
         padding: 0 3rem 3rem 3rem;
+        @include Res700 {padding: 0 2rem 2rem 2rem;};
+        @include Res500 {padding: 0 1.5rem 1.5rem 1.5rem;};
+        @include iphone12Pro {padding: 0 1rem 1rem 1rem;};
+        @include iphoneSE {padding: 0 0.5rem 0.5rem 0.5rem;};
 
         .PageDescription {
             border-radius: 0.7rem;
@@ -34,10 +42,18 @@
             padding: 2.5rem;
             box-shadow: inset 0px 0px 4px 1px #000000;
 
+            @include Res700 {padding: 1.5rem;};
+            @include Res500 {padding: 1rem;};
+            @include iphone12Pro {padding: 1rem 0.5rem;};
+            @include iphoneSE {padding: 1rem 0rem;};
+
             h4 {
                 // background-color: blue;
                 padding: 0.5rem 1.5rem;
                 font-size: 2.1rem;
+                @include Res700 {font-size: 1.65rem;};
+                @include Res500 {font-size: 1.5rem;};
+                @include iphoneSE {font-size: 1.3rem;};
             }
 
             p {

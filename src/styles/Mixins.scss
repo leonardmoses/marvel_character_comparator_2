@@ -9,6 +9,7 @@
     border: none;
     padding: 0.3rem 0.8rem;
     margin: 0 1px;
+    width: 10rem;
     text-align: center;
     text-decoration: none;
     font-size: $FontSize;
@@ -26,6 +27,18 @@
         background-color: $gold5;
         color: $gold1;
     }
+
+    @include Res900 {
+        justify-content: center;
+    };
+
+    @include iphone12Pro {
+        // background-color: $tertiary1;
+        margin: 0;
+        padding: 0.3rem 0;
+        width: 40%;
+        border: solid 1px black;
+    };
 }
 
 @mixin Button2($FontSize) {
@@ -66,12 +79,25 @@
         cursor: pointer;
         text-align: center;
         position: relative;
+
+        @include Res500 {
+            font-size: 1rem;
+            margin: 0 auto;
+            width: 98%;
+        }
+
     
         h5 {
             position: absolute;
             width: 100%;
             top: 20%;
             color: $gold5;
+
+            @include Res500 {
+                top: 25%;
+                font-size: 1rem;
+            }
+
         }
 
         transition-duration: 0.3s;

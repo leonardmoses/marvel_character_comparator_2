@@ -13,9 +13,8 @@
     .Links {
         // background-color: rgb(70, 113, 128);
         display: flex;
-        float: right;
-        margin-right: 2rem;
-        // padding: 2rem;
+        width: fit-content;
+        margin: 0 auto;
 
         h5 {
             font-size: 1rem;

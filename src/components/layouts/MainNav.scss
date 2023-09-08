@@ -25,6 +25,7 @@
 
         h2 {
             font-size: 2.65rem;
+            @include iphone5SE {font-size: 2.5rem;};
         }
     }
 
@@ -32,9 +33,22 @@
         display: flex;
         // background-color: aqua;
         margin-top: 2rem;
+        width: 100%;
+
+        @include Res900 {
+            // margin-top: 3rem;
+            display: block;
+            flex-wrap: wrap;
+            text-align: center;
+        };
+
 
         button {
             @include Button1(1rem);
+
+            @include Res500 {
+                @include Button1(0.9rem);
+            }
         }
 
         ul {
@@ -42,6 +56,14 @@
             display: flex;
             margin: 0 0 0 auto;
             @include ButtonNav;
+
+            @include Res900 {
+                justify-content: center;
+            };
+
+            @include iphone12Pro {
+                display: block;
+            };
         }
     }
 }
