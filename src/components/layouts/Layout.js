@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import MainNav from "./MainNav";
 
 
@@ -6,6 +7,7 @@ const Layout = (props) => {
         <>
             <MainNav/>
             <main>{props.children}</main>
+            <Footer/>
         </>
      );
 }

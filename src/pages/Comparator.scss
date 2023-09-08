@@ -196,13 +196,15 @@
       background-color: $gold4;
       width: 100%;
       margin: 0 auto;
+      // box-shadow: inset 0 0 1px 0.5px black;
 
       .SearchInputAndSubmit {
-        width: 100%;
+        width: auto;
         margin: 0 auto;
 
         .Input {
           width: 80%;
+          border-radius: 4px;
         }
 
         .SearchSubmit {

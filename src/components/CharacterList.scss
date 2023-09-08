@@ -1,6 +1,6 @@
 @import "../App.scss";
 
-.CharacterListBody {
+.CharacterListComponent {
   // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   background-color: $MarvelBlack;
   top:0px;
@@ -9,7 +9,6 @@
   position: fixed;
   animation: dropDownPage 300ms ease-in-out forwards;
   transform-origin: top center;
-
   
   @keyframes dropDownPage {
     0% {
@@ -20,29 +19,45 @@
     }
   }
 
-  h3 {
-    text-align: center;
+
+
+  .CharacterListHeader {
+    // background-color: blue;
+    // width: 100%;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.443);
+    padding: 1rem 0 0.3rem 0;
+    margin: 0 auto;
+
+    button {
+      background-color: rgb(225, 222, 218);
+      color: black;
+      margin-right: 2.2rem;
+      float: right;
+      border: solid 1px rgba(110, 92, 57, 0.449);
+      height: 2rem;
+      width: 7rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  
+    button:hover {
+        background-color: #202020;
+        color: white;
+    }
+
+    h3 {
+      text-align: center;
+      padding: 3rem 0 1.5rem 0;
+      font-size: 3rem;
+    }
   }
 
-  button {
-    background-color: rgb(225, 222, 218);
-    color: black;
-    margin: 0 1px;
-    border: solid 1px rgba(110, 92, 57, 0.449);
-    height: 2rem;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 5px;
-}
-  button:hover {
-      background-color: #202020;
-      color: white;
-  }
 
-  .ListContainer {
+  .CharacterListBody {
+    background-image: linear-gradient(0deg, $complementary3, $MarvelBlack);
+    padding-top: 1rem;
     overflow-y: scroll;
     max-height: 60vh;
-
 
     ul {
       background-color: $MarvelBlack;
@@ -51,7 +66,6 @@
       grid-template-columns: repeat(4, 1fr);
       padding: 0.5rem;
       margin: 0 10px;
-
 
       li {
         background-color: white;
@@ -75,7 +89,6 @@
             opacity: 1;
           }
         }
-
       }
     }
   }

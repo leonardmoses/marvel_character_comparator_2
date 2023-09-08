@@ -1,0 +1,40 @@
+@import '../../App.scss';
+
+.Footer {
+    // background-color: rgb(52, 52, 52);
+    height: fit-content;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-top: solid 1px rgba(255, 255, 255, 0.383);
+    // display: flex;
+    // flex-wrap: wrap;
+
+    .Links {
+        // background-color: rgb(70, 113, 128);
+        display: flex;
+        float: right;
+        margin-right: 2rem;
+        // padding: 2rem;
+
+        h5 {
+            font-size: 1rem;
+            font-weight: 100;
+            color: white;
+            padding: 0 1rem;
+            border-right: solid 1px white;
+        }
+        h5:hover {
+            color: $secondary3;
+        }
+        h5:active {
+            color: $complementary3;
+        }
+        
+        .RightLink {
+            h5 {
+                border-right: none;
+            }
+        }
+    }
+}
