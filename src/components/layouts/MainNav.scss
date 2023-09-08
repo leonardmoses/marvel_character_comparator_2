@@ -8,12 +8,16 @@
         // background-color: blue;
         width: 100%;
 
-        h1 , h2, h3{
-            text-align: center;
-            color: $MarvelRed;
+        .H1 {
+            width: fit-content;
+            margin: 0 auto;
         }
-        
-    
+
+        .H2 {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
         h1 {
             @include Logo();
             font-size: 6rem;
@@ -24,66 +28,20 @@
         }
     }
 
-
     .ButtonsAndLinks {
         display: flex;
         // background-color: aqua;
         margin-top: 2rem;
 
         button {
-            background-color: rgb(255, 255, 255);
-            color: rgb(74, 8, 56);
-            margin: 0 1px;
-            border: none;
-            height: 2rem;
-            width: 10rem;
-            cursor: pointer;
-            border-radius: 5px;
+            @include Button1(1rem);
         }
-        button:hover {
-            background-color: rgb(77, 6, 63);
-            color: white;
-        }
-    
+
         ul {
             // background-color: green;
             display: flex;
             margin: 0 0 0 auto;
-
-            li {
-                background-color: rgb(255, 255, 255);
-                color: rgb(74, 8, 56);
-                border: solid 1px grey;
-                border-top-left-radius: 7px;
-                border-top-right-radius: 7px;
-                height: 2rem;
-                width: 10rem;
-                cursor: pointer;
-                text-align: center;
-                position: relative;
-
-                h5 {
-                    // background-color: blue;
-                    position: absolute;
-                    width: 100%;
-                    top: 20%;
-                }
-            }
-            :hover{
-                background-color: rgb(77, 6, 63);
-                color: white;
-            }
-            :active {
-                color: rgb(144, 117, 139);
-            }
-
-            :visted {
-                color: rgb(74, 8, 56);
-            }
-
+            @include ButtonNav;
         }
-
     }
-
-
 }

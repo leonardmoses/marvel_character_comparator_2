@@ -32,8 +32,8 @@ const MainNav = () => {
   return (
     <div className="NavBody">
       <div className="TitleDiv">
-        <Link to="/"><h1>MARVEL</h1></Link>
-        <Link to="/"><h2>Character Comparator</h2></Link>
+        <div className="H1"><Link to="/"><h1>MARVEL</h1></Link></div>
+        <div className="H2"><Link to="/"><h2>Character Comparator</h2></Link></div>
       </div>
 
       <div className="ButtonsAndLinks">

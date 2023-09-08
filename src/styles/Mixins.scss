@@ -1,0 +1,93 @@
+@import "./Type.scss";
+@import "./Variables.scss";
+
+
+@mixin Button1($FontSize) {
+
+    background-color: $goldWhite;
+    color: $gold5;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    margin: 0 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: $FontSize;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    
+    &:hover {
+        background-color: $gold4;
+        color: $gold1;
+    }
+    &:active {
+        transform: scale(0.97);
+        background-color: $gold5;
+        color: $gold1;
+    }
+}
+
+@mixin Button2($FontSize) {
+    background-color: rgb(240, 240, 240);
+    color: $tertiary5;
+    font-family: 'Roboto','Trebuchet MS','Helvetica,Arial','sans-serif';
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 0.3rem 0.8rem;
+    // text-align: center;
+    text-decoration: none;
+    font-size: $FontSize;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+    
+    &:hover {
+        background-color: $tertiaryBlack;
+        border: 1px solid $tertiary1;
+        color: $tertiary1;
+    }
+    &:active {
+        transform: scale(0.9);
+        background-color: black;
+        border: 1px solid white;
+        color: $tertiaryWhite;
+    }
+}
+
+@mixin ButtonNav {
+    li {
+        background-color: $goldWhite;
+        border: solid 1px grey;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        height: 2rem;
+        width: 10rem;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+    
+        h5 {
+            position: absolute;
+            width: 100%;
+            top: 20%;
+            color: $gold5;
+        }
+
+        transition-duration: 0.3s;
+    }
+
+    li:hover {
+        background-color: $gold4;
+        h5 {
+            color: $gold1;
+        }
+    }
+
+    li:active {
+        background-color: $gold5;
+        h5 {
+            color: $gold1;
+        }
+    }
+}

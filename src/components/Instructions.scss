@@ -27,19 +27,8 @@
   }
 
   button {
-    background-color: rgb(225, 222, 218);
-    color: black;
-    margin: 0 1px;
-    border: solid 1px rgba(110, 92, 57, 0.449);
-    height: 2rem;
-    width: 10rem;
-    cursor: pointer;
-    border-radius: 5px;
+    @include Button2(1.35rem);
 }
-  button:hover {
-      background-color: #202020;
-      color: white;
-  }
 
   h3 {
     margin: 1rem;

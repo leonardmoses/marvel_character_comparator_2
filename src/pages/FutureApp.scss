@@ -3,23 +3,26 @@
 .FutureAppBody {
     // background-color: black;
     background-color: rgb(160, 129, 67);
-    background-image: linear-gradient(90deg, rgb(160, 129, 67) , white, rgb(160, 129, 67));
-
-
-    .FutureAppTitle, .FutureAppContent {
-        // background-color: rgba(0, 0, 0, 0.749);
-    }
+    background-image: linear-gradient(90deg, $gold3, white, $gold3);
 
     .FutureAppTitle {
         padding: 3rem 2rem;
 
         h2 , h3 {
             text-align: center;
-            color: rgb(142, 112, 51);
+            
         }
+
         h2 {
-            border-bottom: solid 1px black;
+            padding-bottom: 0.8rem;
+            border-bottom: solid 1px $goldBlack;
+            font-size: 3.5rem;
         }
+
+        h3 {
+            font-size: 2.25rem;
+        }
+
     }
 
     .FutureAppContent {
@@ -27,17 +30,19 @@
 
         .PageDescription {
             border-radius: 0.7rem;
-            background-color: white;
+            background-color: $goldWhite;
             padding: 2.5rem;
             box-shadow: inset 0px 0px 4px 1px #000000;
 
             h4 {
                 // background-color: blue;
                 padding: 0.5rem 1.5rem;
+                font-size: 2.1rem;
             }
 
             p {
                 padding: 0.5rem 1.5rem;
+                font-weight: 300;
             }
         }
     }

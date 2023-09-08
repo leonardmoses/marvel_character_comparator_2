@@ -50,8 +50,8 @@ const SingleCharacter = (props) => {
             </div>
 
             <div className="CharacterInfo">
-              <div className="Name"><h4>{selectedCharacter1?.name ? selectedCharacter1?.name : "—"}</h4></div>
-            <div className="FullName"><h4>{selectedCharacter1?.biography?.["full-name"] ? selectedCharacter1?.biography?.["full-name"] : "—"}</h4></div>
+              <div className="Name"><h4>{selectedCharacter1?.name ? selectedCharacter1?.name : "Alias"}</h4></div>
+            <div className="FullName"><h4>{selectedCharacter1?.biography?.["full-name"] ? selectedCharacter1?.biography?.["full-name"] : "Full Name"}</h4></div>
 
             <div className="Stats">
               <h4>Power Stats</h4>
