@@ -154,22 +154,27 @@
             width: 50%;
             margin: 0.5rem 0;
             border-bottom: 1px solid rgba(173, 216, 230, 0.243);
+            @include Res500{
+              font-size: 1rem;
+            };
           }
 
           .InfoType {
             font-weight: 300;
-            @include Res500{
-              font-weight: 400;
-              font-size: 1.5rem;
-            };
           }
 
           .InfoValue {
             text-align: right;
             font-weight: 100;
             letter-spacing: 0.05rem;
+            @include Res900{
+              font-size: 1.1rem;
+            };
+            @include Res700{
+              font-size: 1rem;
+            };
             @include Res500{
-              margin-bottom: 1.7rem;
+              // letter-spacing: 0.01rem;
             };
           }
 
@@ -177,30 +182,54 @@
             display: flex;
             flex-wrap: wrap;
             padding: 1.5rem 1.5rem 0 1.5rem;
-            @include Res500{
-              padding: 1.7rem 0.8rem 0 0.8rem;
-              // word-break: break-all;
-            };
+            @include Res900{padding: 1.7rem 1rem 0 1rem;};
+            @include Res700{padding: 1.7rem 1rem 0 1rem;};
+            @include Res500{padding: 1.7rem 0.8rem 0 0.8rem;};
 
             h4 {
               color: white;
               margin-bottom: 0.5rem;
-              @include Res500{
+              @include Res700{
                 font-size: 1.5rem;
-                text-align: center;
               };
             }
 
             h5 {
+              @include Res700{
+                font-size: 1.1rem;
+              };
+
               @include Res500{
                 font-size: 1rem;
-                text-align: center;
-                // background-color: pink;
-                width: 100%;
               };
-              
             }
           }
+
+          .Intel {
+            h5 {
+                
+                font-size: 1rem;
+                text-align: left;
+                width: 100%;
+                @include Res900{
+                  font-size: 1rem;
+                };
+                @include iphoneSE{
+                  font-size: 0.8rem;
+                };
+            }
+
+            .InfoType {
+              padding-top: 1rem;
+              border: none;
+              margin: 0;
+            }
+            .InfoValue {
+              padding-bottom: 1rem;
+            }
+
+          }
+          
         }
 
         .ImageBackground {
@@ -221,9 +250,9 @@
                 @include Res900 {max-height: 30vh;};
                 @include Res700 {max-height: 28vh;};
                 @include Res500 {max-height: 25vh;};
-                @include iphone12Pro {max-height: 30vh;};
-                @include iphoneSE {max-height: 34vh;};
-                @include iphone5SE {max-height: 34vh;};
+                @include iphone12Pro {max-height: 25vh;};
+                @include iphoneSE {max-height: 25vh;};
+                @include iphone5SE {max-height: 30vh;};
             }
           }
         }
@@ -238,16 +267,28 @@
       .SearchInputAndSubmit {
         width: auto;
         margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
 
         .Input {
           width: 80%;
           border-radius: 4px;
-          @include Res500 {width: 95%; margin: 0 auto};
+          @include Res900 {width: 80%; margin: 0 auto};
+          @include Res700 {width: 100%; margin: 0 auto};
+          @include Res500 {width: 100%; margin: 0 auto};
+          @include iphone12Pro {width: 100%; margin: 0 auto};
+          @include iphoneSE {width: 100%; margin: 0 auto};
+          @include iphone5SE {width: 100%; margin: 0 auto};
         }
 
         .SearchSubmit {
           width: 18%;
-          @include Res500 {width: 100%;};
+          @include Res900 {width: 17%; margin: 0 auto};
+          @include Res700 {width: 99%; margin: 0 auto};
+          @include Res500 {width: 99%; margin: 0 auto};
+          @include iphone12Pro {width: 99%; margin: 0 auto};
+          @include iphoneSE {width: 99%; margin: 0 auto};
+          @include iphone5SE {width: 99%; margin: 0 auto};
         }
       }
     }

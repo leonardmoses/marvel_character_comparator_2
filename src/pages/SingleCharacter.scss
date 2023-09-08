@@ -33,6 +33,7 @@
           margin: 0 auto;
           z-index: 2;
           border: 1px solid $secondaryBlack;
+          @include Res500 {height: 4rem;};
 
           button {
             text-align: center;
@@ -42,6 +43,7 @@
             background-color: $secondary5;
             color: $secondaryWhite;
             border: 1px solid $secondaryBlack;
+            @include Res500 {width: 50%};
           }
           button:hover {
             background-color: $secondary1;
@@ -51,6 +53,8 @@
             background-color: $secondaryWhite;
             color: $secondary3;
           }
+
+          
       }
       
   
@@ -96,10 +100,17 @@
               margin: 0.5rem 0;
               border-bottom: 1px solid rgba(173, 216, 230, 0.243);
               font-weight: lighter;
+              @include Res500{
+                // margin-bottom: 1.7rem;
+              };
             }
   
             .InfoType {
               font-weight: 300;
+              @include Res500{
+                font-weight: 400;
+                // font-size: 1.5rem;
+              };
             }
   
             .InfoValue {
@@ -107,18 +118,47 @@
               font-weight: 100;
               letter-spacing: 0.05rem;
               text-align: right;
+              @include Res500{
+                font-weight: 200;
+                font-size: 1rem;
+              };
             }
   
             .Stats, .Bio, .Intel {
               display: flex;
               flex-wrap: wrap;
               padding: 1.5rem 1.5rem 0 1.5rem;
+              @include Res500{
+                padding: 1.7rem 0.8rem 0 0.8rem;
+                // word-break: break-all;
+              };
 
               h4 {
                 color: white;
                 margin-bottom: 0.5rem;
               }
             }
+
+            .Intel {
+              h5 {
+                  
+                  font-size: 1rem;
+                  text-align: left;
+                  width: 100%;
+                  @include Res900{font-size: 1rem;};
+              }
+  
+              .InfoType {
+                padding-top: 1rem;
+                border: none;
+                margin: 0;
+              }
+
+              .InfoValue {
+                padding-bottom: 1rem;
+              }
+            }
+
           }
           
           .ImageBackground {
@@ -139,6 +179,9 @@
                   max-height: 30vh;
               }
             }
+
+
+
           }
       }
   
@@ -149,15 +192,29 @@
   
         .SearchInputAndSubmit {
           // background-color: green;
-          width: 100%;
+          width: auto;
           margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
   
           .Input {
             width: 80%;
+            @include Res900 {width: 81%; margin: 0 auto};
+            @include Res700 {width: 99%; margin: 0 auto};
+            @include Res500 {width: 97%; margin: 0 auto};
+            @include iphone12Pro {width: 97%; margin: 0 auto};
+            @include iphoneSE {width: 97%; margin: 0 auto};
+            @include iphone5SE {width: 97%; margin: 0 auto};
           }
   
           .SearchSubmit {
-            width: 18%;
+            width: 19%;
+            @include Res900 {width: 17%; margin: 0 auto};
+            @include Res700 {width: 99%; margin: 0 auto};
+            @include Res500 {width: 99%; margin: 0 auto};
+            @include iphone12Pro {width: 99%; margin: 0 auto};
+            @include iphoneSE {width: 99%; margin: 0 auto};
+            @include iphone5SE {width: 99%; margin: 0 auto};
           }
         }
       }

@@ -7,10 +7,25 @@
   padding: 1.5rem;
   text-align: center;
   width: 30rem;
+  left: calc(50% - 15rem);
+  top: 20vh;
   z-index: 10;
   position: fixed;
-  top: 20vh;
-  left: calc(50% - 15rem);
+  
+  @include Res900 {
+    width: 90%;
+    left: 2.5%;
+  };
+  @include Res700 {
+    width: 80%;
+    left: 7.5%;
+    top: 15vh;
+  };
+  @include Res700 {
+    width: 75%;
+    left: 7.5%;
+    top: 20vh;
+  };
 
   animation: modalFadeIn 600ms ease-in-out forwards;
 
@@ -35,6 +50,7 @@
     padding: 0.5rem;
     border-top: solid 1px rgb(45, 39, 6);
     border-bottom: solid 1px black;
+    @include Res500 {font-size: 1.5rem;};
   }
 
   .ParagraphDiv {
@@ -44,6 +60,8 @@
       text-align: left;
       margin: 0.7rem;
       // text-decoration: ;
+      @include Res700 {font-size: 0.9rem;};
+      @include Res500 {font-size: 0.8rem;};
     }
   }
 

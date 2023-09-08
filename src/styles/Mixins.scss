@@ -52,6 +52,10 @@
     font-size: $FontSize;
     border-radius: 3px;
     cursor: pointer;
+    @include Res500 {
+        padding: 0.3rem 0.8rem;
+        width: 90%;
+    };
 
     transition-duration: 0.3s;
     

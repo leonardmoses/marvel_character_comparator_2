@@ -19,8 +19,6 @@
     }
   }
 
-
-
   .CharacterListHeader {
     // background-color: blue;
     // width: 100%;
@@ -29,15 +27,27 @@
     margin: 0 auto;
 
     button {
-      @include Button2(1.5rem);
+      @include Button2(1.2rem);
       float: right;
       margin-right: 2.2rem;
+      @include Res900 {@include Button2(1rem);};
+      @include Res500 {
+        @include Button2(0.9rem);
+        float:none;
+        margin: 0 5%;
+      };
+
     }
 
     h3 {
       text-align: center;
       padding: 3rem 0 1.5rem 0;
       font-size: 3rem;
+      @include Res700 {font-size: 2.6rem;};
+      @include Res500 {
+        font-size: 2rem;
+        padding: 1.5rem 0 0.5rem 0;
+      };
     }
   }
 
@@ -47,6 +57,11 @@
     padding-top: 1rem;
     overflow-y: scroll;
     max-height: 60vh;
+    @include Res900 {max-height: 70vh;};
+    @include Res700 {max-height: 83vh;};
+    @include Res500 {max-height: 85vh;};
+    @include iphoneSE {max-height: 80vh;};
+    @include iphone5SE {max-height: 72vh;};
 
     ul {
       background-color: $MarvelBlack;
@@ -55,6 +70,8 @@
       grid-template-columns: repeat(4, 1fr);
       padding: 0.5rem;
       margin: 0 10px;
+      @include Res900 {grid-template-columns: repeat(3, 1fr);};
+      @include iphone12Pro {grid-template-columns: repeat(2, 1fr);};
 
       li {
         background-color: white;
@@ -64,6 +81,13 @@
         animation: growDownListItems 800ms ease-in-out forwards;
         transform-origin: bottom center;
         box-shadow: 0px 0px 13px 4px #000000;
+        @include Res700 {
+          padding: 0.8rem;
+          font-size: 0.8rem;
+        };
+        @include Res500 {
+          padding: 0.6rem;
+        };
 
         @keyframes growDownListItems {
           0% {
@@ -93,5 +117,10 @@
         }
       }
     }
+  }
+
+  .CharacterListFooter {
+    background-color: $complementary3;
+    height: 1rem;
   }
 }

@@ -18,6 +18,9 @@ const CharcterList = (props) => {
           ))}
         </ul>
       </div>
+
+      <div className="CharacterListFooter">
+      </div>
     </div>
   );
 };
