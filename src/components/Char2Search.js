@@ -23,7 +23,6 @@ const Char2SearchForm = (props) => {
                     <input className="Input" type="text" placeholder="Superhero Name" ref={inputName2Ref} />
                     <input className="SearchSubmit" type="submit" value='search' />
                 </div>
-
             </form>
         </>
      );

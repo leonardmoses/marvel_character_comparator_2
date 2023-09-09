@@ -136,6 +136,12 @@
               h4 {
                 color: white;
                 margin-bottom: 0.5rem;
+                @include Res700{
+                  font-size: 1.8rem;
+                };
+              }
+              h5 {
+                @include iphone12Pro{font-size: 1.1rem;};
               }
             }
 
@@ -196,9 +202,14 @@
           margin: 0 auto;
           display: flex;
           flex-wrap: wrap;
+
+          input {
+            background-color: $tertiaryWhite;
+          }
   
           .Input {
             width: 80%;
+            border-radius: 3px;
             @include Res900 {width: 81%; margin: 0 auto};
             @include Res700 {width: 99%; margin: 0 auto};
             @include Res500 {width: 97%; margin: 0 auto};
@@ -208,7 +219,10 @@
           }
   
           .SearchSubmit {
+            background-color: $tertiaryWhite;
             width: 19%;
+            border:1px solid black;
+            border-radius: 3px;
             @include Res900 {width: 17%; margin: 0 auto};
             @include Res700 {width: 99%; margin: 0 auto};
             @include Res500 {width: 99%; margin: 0 auto};

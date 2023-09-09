@@ -48,12 +48,26 @@
             @include iphoneSE {padding: 1rem 0rem;};
 
             h4 {
-                // background-color: blue;
+                color: $tertiary5;
                 padding: 0.5rem 1.5rem;
-                font-size: 2.1rem;
-                @include Res700 {font-size: 1.65rem;};
-                @include Res500 {font-size: 1.5rem;};
-                @include iphoneSE {font-size: 1.3rem;};
+                font-size: 1.6rem;
+                @include Res700 {font-size: 1.3rem;};
+                @include Res500 {font-size: 1.2rem;};
+                @include iphone12Pro {font-size: 1.1rem;};
+            }
+
+            h5 {
+                color: $tertiary4;
+                padding: 1rem 1.5rem 0rem 1.5rem;
+                font-size: 1.3rem;
+                font-weight: 500;
+                @include Res700 {font-size: 1.1rem;};
+                @include Res500 {font-size: 1rem;};
+            }
+            h6 {
+                font-size: 1rem;
+                color: $complementary5;
+                padding: 1rem 1.5rem 0rem 1.5rem;
             }
 
             p {

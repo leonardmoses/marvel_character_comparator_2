@@ -193,15 +193,9 @@
                 font-size: 1.5rem;
               };
             }
-
             h5 {
-              @include Res700{
-                font-size: 1.1rem;
-              };
-
-              @include Res500{
-                font-size: 1rem;
-              };
+              @include Res700{font-size: 1.1rem;};
+              @include Res500{font-size: 1rem;};
             }
           }
 
@@ -270,9 +264,13 @@
         display: flex;
         flex-wrap: wrap;
 
+        input {
+          background-color: $tertiaryWhite;
+        }
+
         .Input {
           width: 80%;
-          border-radius: 4px;
+          border-radius: 3px;
           @include Res900 {width: 80%; margin: 0 auto};
           @include Res700 {width: 100%; margin: 0 auto};
           @include Res500 {width: 100%; margin: 0 auto};
@@ -282,7 +280,10 @@
         }
 
         .SearchSubmit {
+          background-color: $tertiaryWhite;
           width: 18%;
+          border:1px solid black;
+          border-radius: 3px;
           @include Res900 {width: 17%; margin: 0 auto};
           @include Res700 {width: 99%; margin: 0 auto};
           @include Res500 {width: 99%; margin: 0 auto};
